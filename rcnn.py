@@ -9,4 +9,4 @@ i = 1
 while i < 5:
     print("I vs You")
     i += 1
-print('wwhat the helllll')
+print('toi da tao 2 cai khoa ssh cho linux va window')
