@@ -1,3 +1,4 @@
 print('Test push code again')
-x = 10
-print(x)
+for i in range(5):
+    print(i, end=' ')
+
