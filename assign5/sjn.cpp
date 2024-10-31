@@ -1,8 +1,10 @@
 // // sjn standard for 'shortest job first' or 'shortest job next' (non preemptive)
-#include <iostream>
-#include <vector>
+#include <iostream> // print in screen
+#include <fstream> // read and write file txt
+#include <vector> // vector
 #include <algorithm>
 #include <climits>
+#include <iomanip> //use setw
 
 using namespace std;
 
@@ -60,19 +62,25 @@ void sjfScheduling(vector<Process> &processes) {
     }
 
     // Print the running schedule of each process
-    cout << "Process\tStart Time\tBurst Time\n";
+    ofstream output_file("output.txt");
+    if (output_file.is_open()){
+        output_file << "Process\tStart Time\tBurst Time\n";
     for (const auto &proc : schedule) {
-        cout << "P" << proc.id << "\t" << proc.startTime << "\t\t" << proc.burstTime << endl;
+        output_file << "P" << proc.id << setw(12) << proc.startTime << setw(10) << proc.burstTime << endl;
     }
+    }
+    output_file.close();
+
+    
 }
 
 int main() {
     // Initialize processes with available information: ID, arrival time, burst time
     vector<Process> processes = {
-        {1, 0, 8},
-        {2, 1, 4},
-        {3, 2, 9},
-        {4, 3, 5}
+        {1, 0, 6, },
+        {2, 1, 2, },
+        {3, 3, 9, },
+        {4, 5, 11},
     };
 
     // Implement the SJF algorithm

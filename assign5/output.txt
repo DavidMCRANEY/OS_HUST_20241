@@ -1,0 +1,5 @@
+Process	Start Time	Burst Time
+P1           0         6
+P2           6         2
+P3           8         9
+P4          17        11
