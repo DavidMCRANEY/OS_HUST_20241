@@ -32,8 +32,8 @@ void sjfScheduling(vector<Process> &processes) {
     sort(processes.begin(), processes.end(), compareProcess);
 
     while (!processes.empty()) {
-        int idx = -1;
-        int minBurst = INT_MAX;
+        int idx = -1; // check flag , this mean no process has been found that satisfies the condition
+        int minBurst = INT_MAX; // corresponds to 2^31-1
 
         // Find the process with the smallest burst time that can run at the current time
         for (int i = 0; i < processes.size(); i++) {
@@ -46,11 +46,11 @@ void sjfScheduling(vector<Process> &processes) {
         // If no process arrives, shift the system time to the arrival time of the next process
         if (idx == -1) {
             currentTime = processes[0].arrivalTime;
-            continue;
+            continue; // ignore(skip) command after statement
         }
 
         // Select the process to run next
-        Process &proc = processes[idx];
+        Process &proc = processes[idx]; // pass-reference 
         proc.startTime = currentTime;
         currentTime += proc.burstTime;
 
@@ -60,7 +60,6 @@ void sjfScheduling(vector<Process> &processes) {
         // Remove process from the list
         processes.erase(processes.begin() + idx);
     }
-
     // Print the running schedule of each process
     ofstream output_file("output.txt");
     if (output_file.is_open()){
@@ -80,7 +79,7 @@ int main() {
         {1, 0, 6, },
         {2, 1, 2, },
         {3, 3, 9, },
-        {4, 5, 11},
+        {4, 5, 11 }
     };
 
     // Implement the SJF algorithm
