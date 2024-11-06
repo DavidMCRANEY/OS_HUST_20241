@@ -46,7 +46,7 @@ pip install psutil
 
 ## Tham khảo thêm
 - [Kho mã nguồn psutil trên GitHub](https://github.com/giampaolo/psutil)
-- [Hướng dẫn Python `psutil` trên Real Python](https://realpython.com/python-psutil/)
+- [Hướng dẫn Python `psutil` trên Real Python](https://realpython.com/python-psutil)
 
 ## Tài liệu chính thức
 Để có thêm thông tin chi tiết, tham khảo tài liệu chính thức:
