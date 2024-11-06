@@ -35,7 +35,7 @@ pip install psutil
 
 ## Cấu trúc thư viện
 
-- `psutil` cung cấp nhiều module và phương thức để tương tác với tài nguyên hệ thống. Các mudole chính bao gồm:
+`psutil` cung cấp nhiều module và phương thức để tương tác với tài nguyên hệ thống. Các mudole chính bao gồm:
 - Process: Tương tác với các tiến trình hệ thống
 - CPU: Thu thập thông tin và số liệu liên quan đến CPU
 - Memory: Truy cập thông tin về việc sử dụng bộ nhớ hệ thống
@@ -43,6 +43,14 @@ pip install psutil
 - Network: Giám sát I/O mạng và thông tin kết nối
 - Sensors: Thu thập dữ liệu từ cảm biến nhiệt độ và pin (nếu có)
 
+
+## Tham khảo thêm
+- [Kho mã nguồn psutil trên GitHub](https://github.com/giampaolo/psutil)
+- [Hướng dẫn Python `psutil` trên Real Python](https://realpython.com/python-psutil/)
+
+## Tài liệu chính thức
+Để có thêm thông tin chi tiết, tham khảo tài liệu chính thức:
+- [Tài liệu `psutil`](https://psutil.readthedocs.io/)
 
 
 
