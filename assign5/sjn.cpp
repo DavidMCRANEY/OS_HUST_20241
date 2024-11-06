@@ -76,9 +76,9 @@ void sjfScheduling(vector<Process> &processes) {
 int main() {
     // Initialize processes with available information: ID, arrival time, burst time
     vector<Process> processes = {
-        {1, 0, 6, },
-        {2, 1, 2, },
-        {3, 3, 9, },
+        {1, 0, 6 },
+        {2, 1, 2 },
+        {3, 3, 9 },
         {4, 5, 11 }
     };
 
